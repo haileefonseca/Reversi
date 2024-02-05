@@ -1,0 +1,12 @@
+Found the tile at coordinate: q: 1, r: -2, s: 1.
+Found the tile at coordinate: q: -1, r: -1, s: 2.
+Found the tile at coordinate: q: 2, r: -1, s: -1.
+Found the tile at coordinate: q: -2, r: 1, s: 1.
+Found the tile at coordinate: q: 1, r: 1, s: -2.
+Found the tile at coordinate: q: -1, r: 2, s: -1.
+Results of move at q: 1, r: -2, s: 1 would flip 2 tiles.
+Results of move at q: -1, r: -1, s: 2 would flip 2 tiles.
+Results of move at q: 2, r: -1, s: -1 would flip 2 tiles.
+Results of move at q: -2, r: 1, s: 1 would flip 2 tiles.
+Results of move at q: 1, r: 1, s: -2 would flip 2 tiles.
+Results of move at q: -1, r: 2, s: -1 would flip 2 tiles.

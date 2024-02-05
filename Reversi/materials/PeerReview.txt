@@ -1,0 +1,39 @@
+Design Critique:
+    Some parts of this code were very tightly coupled, every component seemed to communicate
+directly with the model, including strategies and players. This made it difficult to track
+what was being called where and when while trying to adapt their code. It was unclear which
+interfaces were listeners and publishers since they were all named Features- it implied the
+controller has some model behavior that the model itself did not. The interfaces are fairly
+flexible and organized.
+
+Implementation Critique:
+    The views are correctly drawing the game, but were limited in functionality. The size of the
+board and window were hardcoded, so a board size of six will be drawn regardless of the model's
+board size. There also large dead-zones on the board, clicking only works in the center of each
+cell. Selecting is not supported, and all clicks are sent immediately. Apart from this, the clicks
+are calculated and sent to the model accurately. Overall the view is successful.
+    There were some bugs in the strategy, including an aliasing issue where possible moves are not
+reset between turns, leading to invalid move attempts. As a result, the strategies do not work
+further into the game, but will function correctly in the beginning. This could be fixed easily by
+resetting the stored list of moves to be empty at the start of each turn. The strategies also
+constructed their concrete player class, so we had to implement BasicPlayer for the code to
+compile.
+
+Documentation Critique:
+    The javadoc was informative but there were some inconsistencies between it and the code. There
+were some misleading descriptions for interfaces, and some javadocs that described different errors
+than were actually thrown. The javadocs made some assumptions of further understanding of their
+code implementation relating to how classes interact. An example would be the coordinate system:
+we had the implementation, but it was unclear how these coordinates existed in the board, making
+it difficult to understand how the view was drawing it.
+
+Design Limitations/suggestions:
+    The ReversiModel interface does not extend ReadOnlyReversi, and connecting these interfaces
+would provide a lot of flexibility. There were a lot of unnecessarily hard-coded areas in the
+view, that could be replaced with variables that are calculated the same way. This would allow
+support for more game types in the future. There were some places where only one listener was
+stored, where a list could allow for multiple listeners and more flexibility.
+
+We did not request any changes, but we did need a description of their coordinate system and
+board representation in order to make our adapters.
+

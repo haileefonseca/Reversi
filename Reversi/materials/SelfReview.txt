@@ -1,0 +1,12 @@
+We only received one request for clarification from our customers, regarding model-controller
+communication. We could have been more explicit in our descriptions of how all our components
+communicate and where rule-keeping happened. Looking at our customer code, we can see
+the importance of javadoc and fully describing our components for an outside viewer. We
+found ourselves attached to our specific design and initially struggled to mold their code to
+our structure, instead of adding to our design to find a middle ground. We leaned heavily on
+the decorator pattern to pass messages with our model and publishers/subscribers and to
+redirect their methods to our components instead directly re-implementing their behavior in our
+classes.
+Our providers were responsive to our emails when we did have to ask for descriptions, and
+provided a diagram of how their coordinate system worked; we found they were helpful in answering
+our questions quickly, which we appreciated.
